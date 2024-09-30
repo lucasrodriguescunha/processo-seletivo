@@ -98,4 +98,65 @@ A documentação da API pode ser acessada através do Swagger, detalhando os end
 Clone o repositório:
 
 ```console
-git clone https://github.com/seuusuario/seurepositorio.git
+git clone https://github.com/lucasrodriguescunha/processo-seletivo
+```
+
+Navegue até o diretório do backend:
+
+```console
+cd backend-processo-seletivo
+```
+
+Execute o aplicativo:
+
+```console
+./mvnw spring-boot:run
+```
+
+A API estará disponível em:
+
+```console
+http://localhost:8080
+```
+
+---
+
+**Frontend (Angular)**
+
+Clone o repositório:
+
+Clone o repositório:
+
+```console
+git clone https://github.com/lucasrodriguescunha/processo-seletivo
+```
+
+Navegue até o diretório do frontend:
+
+```console
+cd frontend-processo-seletivo
+```
+
+Instale as dependências:
+
+```console
+npm install
+```
+
+Inicie o servidor de desenvolvimento:
+
+```console
+ng serve
+```
+
+O frontend estará disponível em:
+
+```console
+http://localhost:4200
+```
+
+
+
+
+
+
