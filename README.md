@@ -3,6 +3,19 @@
 
 Este repositório tem como objetivo criar um sistema de gerenciamento de projetos e tarefas, permitindo aos usuários criar, visualizar, atualizar e excluir projetos e suas respectivas tarefas. O sistema inclui uma API backend em Java (Spring Boot) e um frontend desenvolvido em Angular que consome essa API.
 
+### Sumário
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+  - [Backend](#backend)
+  - [Frontend](#frontend)
+- [Endpoints da API](#endpoints-da-api)
+  - [Endpoints de Projetos](#endpoints-de-projetos)
+  - [Endpoints de Tarefas](#endpoints-de-tarefas)
+- [Instalação e Execução](#instalação-e-execução)
+  - [Backend (Spring Boot)](#backend-spring-boot)
+  - [Frontend (Angular)](#frontend-angular)
+- [Documentação da API](#documentação-da-api)
+
 ### Funcionalidades
 
 **Gerenciamento de Projetos:** Criação, listagem, atualização de status ("Não iniciado", "Em andamento", "Concluído"), atualização dos dados e exclusão de projetos.
