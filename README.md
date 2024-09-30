@@ -144,6 +144,12 @@ cd backend-processo-seletivo
 http://localhost:8080
 ```
 
+### Documentação da API
+
+A documentação da API pode ser acessada através do Swagger, detalhando os endpoints disponíveis, métodos HTTP, parâmetros e exemplos de requisições e respostas:
+
+- URL da Documentação (Swagger): `http://localhost:8080/swagger-ui/index.html#/`
+
 ---
 
 **Frontend (Angular)**
@@ -204,11 +210,59 @@ ng serve
 http://localhost:4200
 ```
 
-### Documentação da API
+---
 
-A documentação da API pode ser acessada através do Swagger, detalhando os endpoints disponíveis, métodos HTTP, parâmetros e exemplos de requisições e respostas:
+**Database (PostgreSQL)**
 
-- URL da Documentação (Swagger): `http://localhost:8080/swagger-ui/index.html#/`
+**Pré-requisitos:** 
+
+1. *Instalação do PostgreSQL:*
+
+- Certifique-se de ter o PostgreSQL instalado em sua máquina.
+
+2. *Criar um Banco de Dados:*
+
+- Após a instalação, você pode criar um novo banco de dados usando o terminal do PostgreSQL ou uma interface gráfica como o pgAdmin. Execute os seguintes comandos no terminal do PostgreSQL:
+
+3. Abra o terminal do PostgreSQL:
+
+```console
+psql -U seu_usuario
+```
+
+- Após entrar no terminal do PostgreSQL, execute o seguinte comando para criar o banco de dados:
+
+```console
+CREATE DATABASE db-processo-seletivo;
+```
+
+3. *Configuração do Banco de Dados no Spring Boot:*
+
+- No arquivo *application.yml* do seu projeto Spring Boot, adicione as seguintes configurações:
+
+```console
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db-processo-seletivo
+    username: postgres
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true  # Mostra as queries SQL no console, �til para depura��o
+  main:
+    allow-bean-definition-overriding: true
+
+server:
+  port: 8080
+```
+
+4. *Observações:*
+
+- Substitua nome_do_banco_de_dados, seu_usuario, e sua_senha pelas informações corretas do banco de dados.
+
+Com essas instruções, você estará pronto para usar o PostgreSQL no sistema de gerenciamento de projetos e tarefas.
+
 
 
 
