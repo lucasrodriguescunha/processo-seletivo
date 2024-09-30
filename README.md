@@ -85,12 +85,6 @@ A seguir estão todos os endpoints disponíveis para o gerenciamento de tarefas 
 - **Método:** `GET`
 - **URL:** `/api/tarefas/filtro`
 
-### Documentação da API
-
-A documentação da API pode ser acessada através do Swagger, detalhando os endpoints disponíveis, métodos HTTP, parâmetros e exemplos de requisições e respostas:
-
-- URL da Documentação (Swagger): `http://localhost:8080/swagger-ui/index.html#/`
-
 ### Instalação e Execução
 
 **Backend (Spring Boot)**
@@ -153,7 +147,11 @@ O frontend estará disponível em:
 http://localhost:4200
 ```
 
+### Documentação da API
 
+A documentação da API pode ser acessada através do Swagger, detalhando os endpoints disponíveis, métodos HTTP, parâmetros e exemplos de requisições e respostas:
+
+- URL da Documentação (Swagger): `http://localhost:8080/swagger-ui/index.html#/`
 
 
 
