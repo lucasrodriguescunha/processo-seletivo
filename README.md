@@ -130,31 +130,57 @@ http://localhost:8080
 
 **Frontend (Angular)**
 
-Clone o repositório:
+**Pré-requisitos:** Antes de começar, você precisa ter o Node.js e o Angular CLI instalados na sua máquina.
+
+1. *Instalar o Node.js:*
+
+- Faça o download e instale o Node.js
+- Você pode verificar a instalação abrindo um terminal e digitando:
+
+```console
+node -v
+npm -v
+```
+
+2. *Instalar o Angular CLI:*
+
+- Após instalar o Node.js, você pode instalar o Angular CLI globalmente usando o seguinte comando:
+
+```console
+npm install -g @angular/cli
+```
+
+- Verifique a instalação do Angular CLI com:
+
+```console
+ng version
+```
+
+- Clone o repositório:
 
 ```console
 git clone https://github.com/lucasrodriguescunha/processo-seletivo
 ```
 
-Navegue até o diretório do frontend:
+- Navegue até o diretório do frontend:
 
 ```console
 cd frontend-processo-seletivo
 ```
 
-Instale as dependências:
+- Instale as dependências:
 
 ```console
 npm install
 ```
 
-Inicie o servidor de desenvolvimento:
+- Inicie o servidor de desenvolvimento:
 
 ```console
 ng serve
 ```
 
-O frontend estará disponível em:
+- O frontend estará disponível em:
 
 ```console
 http://localhost:4200
