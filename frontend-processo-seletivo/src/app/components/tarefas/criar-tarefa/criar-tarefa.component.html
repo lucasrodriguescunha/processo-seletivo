@@ -1,0 +1,47 @@
+<div class="container mt-5 mb-5">
+  <h2 class="mb-4 text-center">Criar Tarefa</h2>
+  <form (ngSubmit)="criarTarefa()">
+    <div class="mb-4">
+      <label for="projectId" class="form-label">ID do Projeto</label>
+      <input
+        type="number"
+        class="form-control"
+        id="projectId"
+        [(ngModel)]="projetoId"
+        name="projectId"
+        placeholder="Digite o ID do projeto"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label for="taskName" class="form-label">Nome da Tarefa</label>
+      <input
+        type="text"
+        class="form-control"
+        id="taskName"
+        [(ngModel)]="nome"
+        name="taskName"
+        placeholder="Digite o nome da tarefa"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label for="taskDescription" class="form-label"
+        >Descrição da Tarefa</label
+      >
+      <textarea
+        class="form-control"
+        id="taskDescription"
+        [(ngModel)]="descricao"
+        name="taskDescription"
+        rows="4"
+        placeholder="Descreva a tarefa"
+        required
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success w-100">Criar Tarefa</button>
+  </form>
+</div>

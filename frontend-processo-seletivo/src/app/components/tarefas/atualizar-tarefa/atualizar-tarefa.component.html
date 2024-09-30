@@ -1,0 +1,50 @@
+<div class="container mt-5 mb-5">
+  <h2 class="mb-4 text-center">Atualizar Tarefa</h2>
+  <form (ngSubmit)="atualizarTarefa()">
+    <div class="mb-4">
+      <label for="taskId" class="form-label">ID da Tarefa</label>
+      <input
+        type="text"
+        class="form-control"
+        id="taskId"
+        [(ngModel)]="tarefaId"
+        name="taskId"
+        placeholder="Digite o ID da tarefa"
+        required
+        (blur)="buscarTarefa()"
+      />
+    </div>
+
+    <div class="mb-4">
+      <label for="taskName" class="form-label">Nome da Tarefa</label>
+      <input
+        type="text"
+        class="form-control"
+        id="taskName"
+        [(ngModel)]="tarefa.nome"
+        name="taskName"
+        placeholder="Digite o novo nome da tarefa"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label for="taskDescription" class="form-label"
+        >Descrição da Tarefa</label
+      >
+      <textarea
+        class="form-control"
+        id="taskDescription"
+        [(ngModel)]="tarefa.descricao"
+        name="taskDescription"
+        rows="4"
+        placeholder="Digite a nova descrição da tarefa"
+        required
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">
+      Atualizar Tarefa
+    </button>
+  </form>
+</div>

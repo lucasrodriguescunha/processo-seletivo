@@ -1,0 +1,16 @@
+{
+  "routes": [
+    "/alterar-status-projeto",
+    "/atualizar-projeto",
+    "/atualizar-tarefa",
+    "/criar-projeto",
+    "/criar-tarefa",
+    "/excluir-projeto",
+    "/excluir-tarefa",
+    "/filtrar-tarefas",
+    "/listar-projetos",
+    "/listar-tarefas",
+    "/projetos",
+    "/tarefas"
+  ]
+}

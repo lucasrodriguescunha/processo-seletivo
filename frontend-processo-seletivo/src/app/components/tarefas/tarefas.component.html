@@ -1,0 +1,64 @@
+<div class="card shadow-sm">
+  <div class="card-header bg-primary text-white">Tarefas</div>
+  <div class="card-body">
+    <button
+      class="btn btn-outline-primary mb-3 w-100"
+      [routerLink]="['/criar-tarefa']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i class="bi bi-card-checklist"></i>
+      Criar Tarefa
+    </button>
+
+    <button
+      class="btn btn-outline-primary mb-3 w-100"
+      [routerLink]="['/listar-tarefas']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i class="bi bi-list-task"></i>
+      Listar Tarefas
+    </button>
+
+    <button
+      class="btn btn-outline-primary mb-3 w-100"
+      [routerLink]="['/alterar-status-tarefa']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i class="bi bi-stopwatch"></i>
+      Alterar Status da Tarefa
+    </button>
+
+    <button
+      class="btn btn-outline-primary mb-3 w-100"
+      [routerLink]="['/filtrar-tarefas']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i class="bi bi-stopwatch"></i>
+      Filtrar Tarefas
+    </button>
+
+    <button
+      class="btn btn-outline-primary mb-3 w-100"
+      [routerLink]="['/atualizar-tarefa']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i class="bi bi-pencil"></i>
+      Atualizar Tarefa
+    </button>
+
+    <button
+      class="btn btn-outline-primary w-100"
+      [routerLink]="['/excluir-tarefa']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i class="bi bi-file-earmark-x"></i>
+      Excluir Tarefa
+    </button>
+  </div>
+</div>

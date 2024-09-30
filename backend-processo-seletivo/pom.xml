@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- Define a versão do modelo POM -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.3</version> <!-- Versão do Spring Boot -->
+        <relativePath/> <!-- Localiza o pai no repositório -->
+    </parent>
+
+    <!-- Identificadores do projeto -->
+    <groupId>org.example</groupId> <!-- Grupo do projeto -->
+    <artifactId>backend-processo-seletivo</artifactId> <!-- Artefato do projeto -->
+    <version>0.0.1-SNAPSHOT</version> <!-- Versão do projeto -->
+    <name>backend-processo-seletivo</name> <!-- Nome do projeto -->
+    <description>backend-processo-seletivo</description> <!-- Descrição do projeto -->
+    <url/> <!-- URL do projeto (opcional) -->
+
+    <!-- Licenças do projeto -->
+    <licenses>
+        <license/>
+    </licenses>
+
+    <!-- Desenvolvedores do projeto -->
+    <developers>
+        <developer/>
+    </developers>
+
+    <!-- Informações de controle de versão -->
+    <scm>
+        <connection/>
+        <developerConnection/>
+        <tag/>
+        <url/>
+    </scm>
+
+    <properties>
+        <java.version>18</java.version> <!-- Versão do Java utilizada -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- Codificação da fonte do projeto -->
+        <file.encoding>UTF-8</file.encoding> <!-- Codificação do arquivo -->
+    </properties>
+
+    <dependencies>
+        <!-- Dependência para o Actuator do Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- Dependência para a JPA do Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- Dependência de segurança (comentada) -->
+        <!--
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        -->
+
+        <!-- Dependência para construir aplicações web com Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Dependência para desenvolvimento (hot swapping) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope> <!-- Disponível apenas em tempo de execução -->
+            <optional>true</optional> <!-- Opcional, não obrigatório -->
+        </dependency>
+
+        <!-- Dependência para o banco de dados H2 em memória -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope> <!-- Disponível apenas em tempo de execução -->
+        </dependency>
+
+        <!-- Dependência para o driver PostgreSQL -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope> <!-- Disponível apenas em tempo de execução -->
+        </dependency>
+
+        <!-- Dependência do Lombok para reduzir boilerplate de código -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional> <!-- Opcional, não obrigatório -->
+        </dependency>
+
+        <!-- Dependência para testes com Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope> <!-- Disponível apenas para testes -->
+        </dependency>
+
+        <!-- Dependência para testes de segurança do Spring -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope> <!-- Disponível apenas para testes -->
+        </dependency>
+
+        <!-- Dependência para Swagger/OpenAPI -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.1.0</version> <!-- Versão do Springdoc -->
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Plugin para construir o projeto Spring Boot -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

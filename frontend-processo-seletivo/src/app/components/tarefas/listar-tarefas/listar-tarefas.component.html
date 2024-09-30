@@ -1,0 +1,36 @@
+<div class="container mt-5 mb-5">
+  <div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">Listar Tarefas</div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID da Tarefa</th>
+              <th>ID do Projeto</th>
+              <th>Nome da Tarefa</th>
+              <th>Descrição</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let tarefa of tarefas">
+              <td>{{ tarefa.id }}</td>
+              <td>{{ tarefa.projetoId }}</td>
+              <td>{{ tarefa.nome }}</td>
+              <td class="w-50">{{ tarefa.descricao }}</td>
+              <td>
+                <strong> {{ tarefa.status }}</strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="tarefas.length === 0" class="alert alert-primary text-center">
+        Nenhuma tarefa encontrada. Por favor, verifique se a API está
+        funcionando corretamente e se o banco de dados está configurado
+        adequadamente.
+      </div>
+    </div>
+  </div>
+</div>

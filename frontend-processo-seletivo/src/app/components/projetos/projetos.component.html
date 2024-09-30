@@ -1,0 +1,54 @@
+<div class="card shadow-sm">
+  <div class="card-header bg-info text-white">Projetos</div>
+  <div class="card-body">
+    <button
+      class="btn btn-outline-info mb-3 w-100"
+      [routerLink]="['/criar-projeto']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i class="bi bi-kanban"></i>
+      Criar Projeto
+    </button>
+
+    <button
+      class="btn btn-outline-info mb-3 w-100"
+      [routerLink]="['/listar-projetos']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i class="bi bi-list-task"></i>
+      Listar Projetos
+    </button>
+
+    <button
+      class="btn btn-outline-info mb-3 w-100"
+      [routerLink]="['/alterar-status-projeto']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i class="bi bi-stopwatch"></i>
+      Alterar Status do Projeto
+    </button>
+
+    <button
+      class="btn btn-outline-info mb-3 w-100"
+      [routerLink]="['/atualizar-projeto']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i class="bi bi-pencil"></i>
+      Atualizar Projeto
+    </button>
+
+    <button
+      class="btn btn-outline-info w-100"
+      [routerLink]="['/excluir-projeto']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i class="bi bi-trash"></i>
+      Excluir Projeto
+    </button>
+  </div>
+</div>

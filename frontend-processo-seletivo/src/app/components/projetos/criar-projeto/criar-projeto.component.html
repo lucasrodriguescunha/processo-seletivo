@@ -1,0 +1,32 @@
+<div class="container mt-5 mb-5">
+  <h2 class="mb-4 text-center">Criar Projeto</h2>
+  <form [formGroup]="projetoForm" (ngSubmit)="onSubmit()">
+    <div class="mb-4">
+      <label for="projectName" class="form-label">Nome do Projeto</label>
+      <input
+        type="text"
+        class="form-control"
+        id="projectName"
+        formControlName="nome"
+        placeholder="Digite o nome do projeto"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label for="projectDescription" class="form-label"
+        >Descrição do Projeto</label
+      >
+      <textarea
+        class="form-control"
+        id="projectDescription"
+        formControlName="descricao"
+        rows="4"
+        placeholder="Descreva o projeto"
+        required
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success w-100">Criar Projeto</button>
+  </form>
+</div>

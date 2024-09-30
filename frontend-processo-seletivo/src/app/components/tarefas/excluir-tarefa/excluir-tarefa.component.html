@@ -1,0 +1,17 @@
+<div class="container mt-5 mb-5">
+  <h2 class="mb-4 text-center">Excluir Tarefa</h2>
+  <form [formGroup]="excluirTarefaForm" (ngSubmit)="onSubmit()">
+    <div class="mb-4">
+      <label for="taskId" class="form-label">ID da Tarefa</label>
+      <input
+        type="text"
+        class="form-control"
+        id="taskId"
+        formControlName="taskId"
+        placeholder="Digite o ID da tarefa a ser excluída"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-danger w-100">Excluir Tarefa</button>
+  </form>
+</div>

@@ -1,0 +1,36 @@
+<form (ngSubmit)="atualizarProjetoStatus()" class="container mt-5 mb-5">
+  <h2 class="mb-4 text-center">Alterar Status do Projeto</h2>
+
+  <div class="mb-4">
+    <label for="id" class="form-label">ID do Projeto:</label>
+    <input
+      id="id"
+      [(ngModel)]="projeto.id"
+      name="id"
+      type="number"
+      class="form-control"
+      placeholder="Digite o ID do projeto"
+      required
+    />
+  </div>
+
+  <div class="mb-4">
+    <label for="status" class="form-label">Status do Projeto:</label>
+    <select
+      id="status"
+      [(ngModel)]="projeto.status"
+      name="status"
+      class="form-select"
+      required
+    >
+      <option value="" disabled selected>Selecione o status</option>
+      <option value="Não iniciado">Não iniciado</option>
+      <option value="Em andamento">Em andamento</option>
+      <option value="Concluído">Concluído</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-info w-100 text-white">
+    Atualizar Status
+  </button>
+</form>

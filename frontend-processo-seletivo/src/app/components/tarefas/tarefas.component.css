@@ -1,0 +1,5 @@
+.active {
+  background-color: #007bff; /* Exemplo de cor para o botão ativo */
+  color: white;
+  border-color: #007bff; /* Exemplo de cor da borda para o botão ativo */
+}

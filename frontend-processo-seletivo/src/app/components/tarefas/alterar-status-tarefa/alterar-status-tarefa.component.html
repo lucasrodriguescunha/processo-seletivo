@@ -1,0 +1,38 @@
+<div class="container mt-5 mb-5">
+  <h2 class="mb-4 text-center">Alterar Status da Tarefa</h2>
+
+  <form (ngSubmit)="alterarStatus()">
+    <div class="mb-4">
+      <label for="id" class="form-label">ID da Tarefa:</label>
+      <input
+        id="id"
+        name="id"
+        type="number"
+        class="form-control"
+        [(ngModel)]="tarefaId"
+        placeholder="Digite o ID da tarefa"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label for="status" class="form-label">Status da Tarefa:</label>
+      <select
+        id="status"
+        name="status"
+        class="form-select"
+        [(ngModel)]="novoStatus"
+        required
+      >
+        <option value="" disabled selected>Selecione o status</option>
+        <option value="Não iniciada">Não iniciada</option>
+        <option value="Em andamento">Em andamento</option>
+        <option value="Concluída">Concluída</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100 text-white">
+      Atualizar Status
+    </button>
+  </form>
+</div>

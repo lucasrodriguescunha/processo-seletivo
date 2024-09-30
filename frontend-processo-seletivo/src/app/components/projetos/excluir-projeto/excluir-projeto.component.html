@@ -1,0 +1,24 @@
+<div class="container mt-5 mb-5">
+  <h2 class="mb-4 text-center">Excluir Projeto</h2>
+
+  <p class="alert alert-danger mb-4">
+    <strong>Atenção:</strong> Ao excluir um projeto, todas as tarefas vinculadas
+    a ele também serão automaticamente removidas.
+  </p>
+
+  <form (ngSubmit)="onExcluirProjeto()">
+    <div class="mb-4">
+      <label for="projectId" class="form-label">ID do Projeto</label>
+      <input
+        type="number"
+        class="form-control"
+        id="projectId"
+        [(ngModel)]="projectId"
+        placeholder="Digite o ID do projeto"
+        name="projectId"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-danger w-100">Excluir Projeto</button>
+  </form>
+</div>

@@ -1,0 +1,43 @@
+<div class="container mt-5 mb-5">
+  <h2 class="mb-4 text-center">Filtrar Tarefas</h2>
+  <form (ngSubmit)="onFiltrarTarefas()">
+    <div class="mb-4">
+      <label for="taskId" class="form-label">ID do Projeto</label>
+      <input
+        type="text"
+        class="form-control"
+        id="taskId"
+        [(ngModel)]="projetoId"
+        name="taskId"
+        placeholder="Digite o ID do projeto"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100 mb-5">
+      Filtrar Tarefas
+    </button>
+
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID da Tarefa</th>
+            <th>Nome da Tarefa</th>
+            <th>Descrição</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tarefa of tarefasFiltradas">
+            <td>{{ tarefa.id }}</td>
+            <td>{{ tarefa.nome }}</td>
+            <td class="w-50">{{ tarefa.descricao }}</td>
+            <td>
+              <strong> {{ tarefa.status }}</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </form>
+</div>

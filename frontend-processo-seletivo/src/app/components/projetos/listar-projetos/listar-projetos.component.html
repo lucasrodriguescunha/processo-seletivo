@@ -1,0 +1,32 @@
+<div class="container mt-5 mb-5">
+  <div class="card shadow-sm">
+    <div class="card-header bg-info text-white">Listar Projetos</div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID do Projeto</th>
+              <th>Nome do Projeto</th>
+              <th>Descrição</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let projeto of projetos">
+              <td>{{ projeto.id }}</td>
+              <td>{{ projeto.nome }}</td>
+              <td class="w-50">{{ projeto.descricao }}</td>
+              <th>{{ projeto.status }}</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="projetos.length === 0" class="alert alert-info text-center">
+        Nenhum projeto encontrado. Por favor, verifique se a API está
+        funcionando corretamente e se o banco de dados está configurado
+        adequadamente.
+      </div>
+    </div>
+  </div>
+</div>
