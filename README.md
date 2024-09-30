@@ -125,8 +125,6 @@ http://localhost:8080
 
 Clone o repositório:
 
-Clone o repositório:
-
 ```console
 git clone https://github.com/lucasrodriguescunha/processo-seletivo
 ```
