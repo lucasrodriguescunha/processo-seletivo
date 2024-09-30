@@ -102,25 +102,43 @@ A seguir estão todos os endpoints disponíveis para o gerenciamento de tarefas 
 
 **Backend (Spring Boot)**
 
-Clone o repositório:
+**Pré-requisitos:** É necessário ter o JDK 18 ou superior instalado.
+
+1. *Java Development Kit (JDK):*
+
+- Você pode verificar a instalação do JDK com o comando:
+
+```console
+java -version
+```
+
+2. *Apache Maven:*
+
+- O Maven é utilizado para gerenciamento de dependências e construção do projeto. Você pode verificar a instalação do Maven com o comando:
+
+```console
+mvn -v
+```
+
+- Clone o repositório:
 
 ```console
 git clone https://github.com/lucasrodriguescunha/processo-seletivo
 ```
 
-Navegue até o diretório do backend:
+- Navegue até o diretório do backend:
 
 ```console
 cd backend-processo-seletivo
 ```
 
-Execute o aplicativo:
+- Execute o aplicativo:
 
 ```console
 ./mvnw spring-boot:run
 ```
 
-A API estará disponível em:
+- A API estará disponível em:
 
 ```console
 http://localhost:8080
