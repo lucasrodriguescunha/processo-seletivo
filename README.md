@@ -14,6 +14,7 @@ Este repositório tem como objetivo criar um sistema de gerenciamento de projeto
 - [Instalação e Execução](#instalação-e-execução)
   - [Backend (Spring Boot)](#backend-spring-boot)
   - [Frontend (Angular)](#frontend-angular)
+  - [Database (PostgreSQL)](#database-postgresql)
 - [Documentação da API](#documentação-da-api)
 
 ### Funcionalidades
