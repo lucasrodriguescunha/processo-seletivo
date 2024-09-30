@@ -224,7 +224,7 @@ http://localhost:4200
 
 - Após a instalação, você pode criar um novo banco de dados usando o terminal do PostgreSQL ou uma interface gráfica como o pgAdmin. Execute os seguintes comandos no terminal do PostgreSQL:
 
-3. Abra o terminal do PostgreSQL:
+3. *Abra o terminal do PostgreSQL:*
 
 ```console
 psql -U seu_usuario
@@ -236,7 +236,7 @@ psql -U seu_usuario
 CREATE DATABASE db-processo-seletivo;
 ```
 
-3. *Configuração do Banco de Dados no Spring Boot:*
+4. *Configuração do Banco de Dados no Spring Boot:*
 
 - No arquivo *application.yml* do seu projeto Spring Boot, adicione as seguintes configurações:
 
