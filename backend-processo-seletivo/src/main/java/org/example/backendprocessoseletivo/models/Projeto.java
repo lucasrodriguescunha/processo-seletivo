@@ -1,4 +1,4 @@
-package org.example.backendprocessoseletivo.model;
+package org.example.backendprocessoseletivo.models;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonManagedReference;

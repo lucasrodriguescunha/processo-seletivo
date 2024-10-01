@@ -1,6 +1,6 @@
-package org.example.backendprocessoseletivo.repository;
+package org.example.backendprocessoseletivo.repositories;
 
-import org.example.backendprocessoseletivo.model.Projeto;
+import org.example.backendprocessoseletivo.models.Projeto;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 // Repositório para a entidade Projeto, responsável por acessar e manipular dados do projeto

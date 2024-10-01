@@ -1,7 +1,7 @@
-package org.example.backendprocessoseletivo.service;
+package org.example.backendprocessoseletivo.services;
 
-import org.example.backendprocessoseletivo.model.Tarefa;
-import org.example.backendprocessoseletivo.repository.TarefaRepository;
+import org.example.backendprocessoseletivo.models.Tarefa;
+import org.example.backendprocessoseletivo.repositories.TarefaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,10 +1,12 @@
-package org.example.backendprocessoseletivo.controller;
+package org.example.backendprocessoseletivo.controllers;
 
 import jakarta.validation.Valid; // Importa a anotação de validação para garantir que os dados recebidos estão corretos
-import org.example.backendprocessoseletivo.model.Tarefa; // Importa a entidade Tarefa
-import org.example.backendprocessoseletivo.repository.TarefaRepository; // Importa o repositório para a entidade Tarefa
-import org.example.backendprocessoseletivo.model.Projeto; // Importa a entidade Projeto
-import org.example.backendprocessoseletivo.repository.ProjetoRepository; // Importa o repositório para a entidade Projeto
+import org.example.backendprocessoseletivo.dto.TarefaRequest;
+import org.example.backendprocessoseletivo.dto.TarefaResponse;
+import org.example.backendprocessoseletivo.models.Tarefa; // Importa a entidade Tarefa
+import org.example.backendprocessoseletivo.repositories.TarefaRepository; // Importa o repositório para a entidade Tarefa
+import org.example.backendprocessoseletivo.models.Projeto; // Importa a entidade Projeto
+import org.example.backendprocessoseletivo.repositories.ProjetoRepository; // Importa o repositório para a entidade Projeto
 import org.springframework.beans.factory.annotation.Autowired; // Importa a anotação para injeção de dependência
 import org.springframework.http.ResponseEntity; // Importa a classe para construir respostas HTTP
 import org.springframework.web.bind.annotation.*; // Importa as anotações para construção de controladores REST
@@ -110,84 +112,5 @@ public class TarefaController {
                 })
                 .orElse(ResponseEntity.notFound().build());  // Retorna 404 se a tarefa não for encontrada
     }
-
-    // Classe interna para receber dados da requisição para criação ou atualização de tarefas
-    public static class TarefaRequest {
-        private String nome; // Nome da tarefa
-        private String descricao; // Descrição da tarefa
-        private boolean concluida; // Indica se a tarefa foi concluída
-        private Long projetoId; // ID do projeto associado à tarefa
-
-        // Getters e setters
-        public String getNome() {
-            return nome;
-        }
-
-        public void setNome(String nome) {
-            this.nome = nome;
-        }
-
-        public String getDescricao() {
-            return descricao;
-        }
-
-        public void setDescricao(String descricao) {
-            this.descricao = descricao;
-        }
-
-        public boolean isConcluida() {
-            return concluida;
-        }
-
-        public void setConcluida(boolean concluida) {
-            this.concluida = concluida;
-        }
-
-        public Long getProjetoId() {
-            return projetoId;
-        }
-
-        public void setProjetoId(Long projetoId) {
-            this.projetoId = projetoId;
-        }
-    }
-
-    // Classe interna para representar a resposta de uma tarefa
-    public static class TarefaResponse {
-        private final Long id; // ID da tarefa
-        private final String nome; // Nome da tarefa
-        private final String descricao; // Descrição da tarefa
-        private final Long projetoId; // ID do projeto associado à tarefa
-        private final String status; // Status da tarefa
-
-        // Construtor que mapeia a tarefa para a resposta
-        public TarefaResponse(Tarefa tarefa) {
-            this.id = tarefa.getId();
-            this.nome = tarefa.getNome();
-            this.descricao = tarefa.getDescricao();
-            this.projetoId = (tarefa.getProjeto() != null) ? tarefa.getProjeto().getId() : null; // Evita NullPointerException
-            this.status = tarefa.getStatus();  // Inclui o status da tarefa na resposta
-        }
-
-        // Getters para acesso aos atributos
-        public Long getId() {
-            return id;
-        }
-
-        public String getNome() {
-            return nome;
-        }
-
-        public String getDescricao() {
-            return descricao;
-        }
-
-        public Long getProjetoId() {
-            return projetoId;
-        }
-
-        public String getStatus() {
-            return status;
-        }
-    }
 }
+

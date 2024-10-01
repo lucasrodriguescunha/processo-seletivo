@@ -1,6 +1,6 @@
-package org.example.backendprocessoseletivo.repository;
+package org.example.backendprocessoseletivo.repositories;
 
-import org.example.backendprocessoseletivo.model.Tarefa;
+import org.example.backendprocessoseletivo.models.Tarefa;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 

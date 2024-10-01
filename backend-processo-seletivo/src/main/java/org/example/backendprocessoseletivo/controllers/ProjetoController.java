@@ -1,9 +1,9 @@
-package org.example.backendprocessoseletivo.controller;
+package org.example.backendprocessoseletivo.controllers;
 
 // Importando as bibliotecas necessárias
 import jakarta.validation.Valid; // Importa a validação de objetos
-import org.example.backendprocessoseletivo.model.Projeto; // Importa o modelo de Projeto
-import org.example.backendprocessoseletivo.repository.ProjetoRepository; // Importa o repositório de Projeto
+import org.example.backendprocessoseletivo.models.Projeto; // Importa o modelo de Projeto
+import org.example.backendprocessoseletivo.repositories.ProjetoRepository; // Importa o repositório de Projeto
 import org.springframework.beans.factory.annotation.Autowired; // Importa a anotação para injeção de dependência
 import org.springframework.http.ResponseEntity; // Importa a classe ResponseEntity para manipulação de respostas HTTP
 import org.springframework.web.bind.annotation.*; // Importa as anotações do Spring para mapeamento de requisições
