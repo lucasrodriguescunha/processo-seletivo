@@ -4,23 +4,24 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tarefas")
+@Table(name = "tarefas")  // Define que esta classe representa a tabela 'tarefas' no banco de dados
 public class Tarefa {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)  // Gera o ID automaticamente usando a estratégia de auto incremento
     private Long id;
 
-    private String nome; // Campo adicionado para o nome da TarefaService
-    private String descricao;
-    private boolean concluida;
-    private String status;
+    private String nome;  // Nome da tarefa
+    private String descricao;  // Descrição detalhada da tarefa
+    private boolean concluida;  // Indica se a tarefa foi concluída
+    private String status;  // Status da tarefa (em andamento, concluída, etc.)
 
-    @ManyToOne // Associa várias tarefas a um projeto
-    @JsonBackReference
-    @JoinColumn(name = "projeto_id") // Nome da coluna no banco de dados
-    private Projeto projeto;
+    @ManyToOne  // Define a relação Many-to-One (muitas tarefas para um projeto)
+    @JsonBackReference  // Evita loop infinito na serialização JSON
+    @JoinColumn(name = "projeto_id")  // Especifica a coluna de chave estrangeira 'projeto_id' na tabela 'tarefas'
+    private Projeto projeto;  // Relacionamento com a entidade Projeto
 
-    // Getters e Setters
+    // Getters e Setters para os campos da entidade
+
     public Long getId() {
         return id;
     }
@@ -29,11 +30,11 @@ public class Tarefa {
         this.id = id;
     }
 
-    public String getNome() { // Getter para o nome da TarefaService
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) { // Setter para o nome da TarefaService
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
@@ -61,7 +62,6 @@ public class Tarefa {
         this.projeto = projeto;
     }
 
-    // Novo campo status
     public String getStatus() {
         return status;
     }

@@ -8,26 +8,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "projetos")
+@Table(name = "projetos")  // Define que esta classe representa a tabela 'projetos' no banco de dados
 public class Projeto {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)  // Gera o ID automaticamente usando a estratégia de auto incremento
     private Long id;
 
-    private String nome;
-    private String descricao;
-
-    private String status;
+    private String nome;  // Nome do projeto
+    private String descricao;  // Descrição do projeto
+    private String status;  // Status do projeto (ativo, finalizado, etc.)
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss.SSSSSS")
-    private LocalDateTime dataCriacao; // Adicione este campo
+    private LocalDateTime dataCriacao;  // Data de criação do projeto, formatada para JSON
 
-    @OneToMany(mappedBy = "projeto", cascade = CascadeType.ALL)
-    @JsonManagedReference
-    private List<Tarefa> tarefas = new ArrayList<>();
+    @OneToMany(mappedBy = "projeto", cascade = CascadeType.ALL)  // Define o relacionamento One-to-Many com Tarefa, mapeado por 'projeto' na classe Tarefa
+    @JsonManagedReference  // Resolve referência cíclica com a entidade Tarefa durante a serialização JSON
+    private List<Tarefa> tarefas = new ArrayList<>();  // Lista de tarefas associadas ao projeto
 
-    // Getters e Setters
+    // Getters e Setters para os campos da entidade
 
     public Long getId() {
         return id;
@@ -53,11 +52,11 @@ public class Projeto {
         this.descricao = descricao;
     }
 
-    public LocalDateTime getDataCriacao() { // Adicione este getter
+    public LocalDateTime getDataCriacao() {
         return dataCriacao;
     }
 
-    public void setDataCriacao(LocalDateTime dataCriacao) { // Adicione este setter
+    public void setDataCriacao(LocalDateTime dataCriacao) {
         this.dataCriacao = dataCriacao;
     }
 

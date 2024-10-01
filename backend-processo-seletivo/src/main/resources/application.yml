@@ -1,14 +1,14 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/db-processo-seletivo
-    username: postgres
-    password: root
+    url: jdbc:postgresql://localhost:5432/db-processo-seletivo  # URL de conexão com o banco de dados PostgreSQL local
+    username: postgres  # Usuário do banco de dados
+    password: root  # Senha do banco de dados
   jpa:
     hibernate:
-      ddl-auto: update
-    show-sql: true  # Mostra as queries SQL no console, �til para depura��o
+      ddl-auto: update  # Atualiza automaticamente a estrutura do banco de dados conforme as mudanças no modelo JPA (use com cuidado em produção)
+    show-sql: true  # Exibe as queries SQL no console, útil para depuração e análise de performance
   main:
-    allow-bean-definition-overriding: true
+    allow-bean-definition-overriding: true  # Permite que definições de beans sejam sobrescritas, útil em cenários de personalização
 
 server:
-  port: 8080
+  port: 8080  # Porta em que o servidor estará escutando
