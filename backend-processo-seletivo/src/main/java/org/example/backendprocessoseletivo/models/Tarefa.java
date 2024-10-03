@@ -2,9 +2,11 @@ package org.example.backendprocessoseletivo.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
 @Table(name = "tarefas")  // Define que esta classe representa a tabela 'tarefas' no banco de dados
+@Data
 public class Tarefa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)  // Gera o ID automaticamente usando a estratégia de auto incremento
@@ -19,54 +21,4 @@ public class Tarefa {
     @JsonBackReference  // Evita loop infinito na serialização JSON
     @JoinColumn(name = "projeto_id")  // Especifica a coluna de chave estrangeira 'projeto_id' na tabela 'tarefas'
     private Projeto projeto;  // Relacionamento com a entidade Projeto
-
-    // Getters e Setters para os campos da entidade
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public boolean isConcluida() {
-        return concluida;
-    }
-
-    public void setConcluida(boolean concluida) {
-        this.concluida = concluida;
-    }
-
-    public Projeto getProjeto() {
-        return projeto;
-    }
-
-    public void setProjeto(Projeto projeto) {
-        this.projeto = projeto;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
 }
