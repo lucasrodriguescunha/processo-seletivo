@@ -1,16 +1,16 @@
-<div class="container mt-4">
-  <h1 class="text-center display-5 font-weight-bold text-primary mb-4">
+<div class="container mt-4"> <!-- Contêiner principal com margem superior de 4 -->
+  <h1 class="text-center display-5 font-weight-bold text-primary mb-4"> <!-- Título centralizado, em negrito, e com cor primária -->
     Sistema de Gerenciamento de Projetos e Tarefas
   </h1>
-  <hr />
-  <div class="row justify-content-center">
-    <div class="col-md-6 mb-3">
-      <app-tarefas></app-tarefas>
+  <hr /> <!-- Linha horizontal para separação -->
+  <div class="row justify-content-center"> <!-- Linha flexível para alinhar os itens no centro -->
+    <div class="col-md-6 mb-3"> <!-- Coluna que ocupa metade da largura em telas médias e acima, com margem inferior -->
+      <app-tarefas></app-tarefas> <!-- Componente personalizado para gerenciar tarefas -->
     </div>
-    <div class="col-md-6 mb-3">
-      <app-projetos></app-projetos>
+    <div class="col-md-6 mb-3"> <!-- Coluna que ocupa metade da largura em telas médias e acima, com margem inferior -->
+      <app-projetos></app-projetos> <!-- Componente personalizado para gerenciar projetos -->
     </div>
   </div>
 </div>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> <!-- Componente que serve como um espaço reservado para renderizar componentes de rota -->
