@@ -25,7 +25,7 @@ Este repositório tem como objetivo criar um sistema de gerenciamento de projeto
 
 ### Tecnologias utilizadas
 
-#### **Backend** 
+**Backend** 
 
 - Linguagem: Java
 - Framework: Spring Boot
