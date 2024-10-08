@@ -153,7 +153,7 @@ A documentação da API pode ser acessada através do Swagger, detalhando os end
 
 ---
 
-#### **Frontend (Angular)**
+**Frontend (Angular)**
 
 **Pré-requisitos:** Antes de começar, você precisa ter o Node.js e o Angular CLI instalados na sua máquina.
 
