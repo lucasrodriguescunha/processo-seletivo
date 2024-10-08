@@ -10,7 +10,7 @@ Este repositório tem como objetivo criar um sistema de gerenciamento de projeto
   - [Frontend](#frontend)
 - [Endpoints da API](#endpoints-da-api)
   - [Endpoints de projetos](#endpoints-de-projetos)
-  - [Endpoints de yarefas](#endpoints-de-tarefas)
+  - [Endpoints de tarefas](#endpoints-de-tarefas)
 - [Instalação e execução](#instalação-e-execução)
   - [Backend (Spring Boot)](#backend-spring-boot)
   - [Frontend (Angular)](#frontend-angular)
